@@ -11,7 +11,7 @@ class HtmlConcealer:
         self.pos_table = np.arange(len(self.content))
 
     def conceal(self):
-        self.remove_pattern(r'<br.*>', replace_with='')  # html linebreaks
+        self.remove_pattern(r'<br.*>', replace_with=' ')  # html linebreaks
         self.remove_pattern(r'<[^>]+>')  # html tags
         self.remove_pattern(r'\xa0+| {2,}', replace_with=' ')  # excess and nobreaking whitespace
         self.remove_pattern(r'(^ +)|( +$)', flags=re.MULTILINE)  # leading or trailing whitespace
