@@ -15,7 +15,7 @@ class HtmlConcealer:
         self.remove_pattern(r'<[^>]+>')  # html tags
         self.remove_pattern(r'\xa0+| {2,}', replace_with=' ')  # excess and nobreaking whitespace
         self.remove_pattern(r'(^ +)|( +$)', flags=re.MULTILINE)  # leading or trailing whitespace
-        self.remove_pattern(r'\n+', replace_with=' ')  # newlines
+        #self.remove_pattern(r'\n+', replace_with=' ')  # newlines
         self.replace_html_special_ents()
 
     def remove_enumeration_numbers(self):
